@@ -1,0 +1,221 @@
+/* === GLOBAL STYLE (applies to all pages) === */
+:root {
+  --primary: #1a3c8c;
+  --accent: #355fd1;
+  --background: #f9fbff;
+  --text: #111;
+  --muted: #6b6f76;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* === NAVBAR === */
+nav {
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* === HERO SECTION / HOME === */
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero button:hover {
+  background: var(--primary);
+}
+
+/* === FORMS (Signup / Login / Contact) === */
+.form-container {
+  max-width: 400px;
+  background: #fff;
+  padding: 30px;
+  margin: 60px auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.form-container h1 {
+  color: var(--primary);
+  margin-bottom: 18px;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.form-container button {
+  width: 100%;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-container button:hover {
+  background: var(--accent);
+}
+
+/* === FEATURE SECTION === */
+.features, .courses {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.features h1, .courses h1 {
+  color: var(--primary);
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.feature-grid, .course-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.feature-item, .course-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-size: 18px;
+}
+
+.material-icons {
+  color: var(--accent);
+  font-size: 28px;
+}
+
+/* === CONTACT PAGE === */
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 40px;
+}
+
+.contact-page img {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.contact-info {
+  max-width: 450px;
+}
+
+.contact-info h2 {
+  color: var(--primary);
+}
+
+.contact-info p {
+  color: var(--muted);
+  margin: 8px 0;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--primary);
+  color: white;
+  margin-top: 60px;
+  font-size: 14px;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #0078d7;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 14px 0;
+  border-bottom: 3px solid #005fa3;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  font-size: 18px;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 6px;
+}
+
+.navbar a:hover {
+  background-color: #005fa3;
+}
+
+.navbar a.active {
+  background-color: white;
+  color: #0078d7;
+  font-weight: bold;
+}

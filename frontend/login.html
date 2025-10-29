@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | LearnLoop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a3c8c;
+      --accent: #355fd1;
+      --bg: #f9fbff;
+      --muted: #6b6f76;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: var(--bg);
+      color: #111;
+    }
+
+    nav {
+      background: var(--primary);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 12px 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ffd700;
+      text-decoration: underline;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+    }
+
+    .login-container {
+      background: #fff;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      border-radius: 10px;
+      padding: 40px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      margin: 20px;
+    }
+
+    h1 {
+      color: var(--primary);
+      font-size: 2rem;
+    }
+
+    input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 5px rgba(53,95,209,0.2);
+    }
+
+    input[type="submit"] {
+      background: var(--accent);
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background: var(--primary);
+    }
+
+    p {
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="tutorials.html">Tutorials</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="notes.html">Notes</a>
+    <a href="signup.html">Signup</a>
+    <a href="login.html" class="active">Login</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <div class="login-container">
+      <h1>Welcome Back 👋</h1>
+      <p>Login to continue your learning journey</p>
+
+      <form id="loginForm">
+        <input type="email" id="email" placeholder="📧 Enter your Email" required>
+        <input type="password" id="password" placeholder="🔒 Enter your Password" required>
+        <input type="submit" value="Login">
+      </form>
+
+      <p>Don’t have an account? <a href="signup.html">Sign up</a></p>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const loginUser = {
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value,
+      };
+
+      const response = await fetch("http://localhost:8080/api/users/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(loginUser),
+      });
+
+      const message = await response.text();
+      alert(message);
+
+      if (response.ok) {
+        // ✅ Redirect user after successful login
+        window.location.href = "index.html";
+      }
+    });
+  </script>
+
+</body>
+</html>

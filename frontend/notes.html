@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Notes | LearnLoop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a3c8c;
+      --accent: #355fd1;
+      --bg: #f9fbff;
+      --muted: #6b6f76;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: var(--bg);
+      color: #111;
+    }
+
+    .wrap {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      text-align: center;
+    }
+
+    h1 {
+      color: var(--primary);
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    p { color: var(--muted); }
+
+    .notes-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .note-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      padding: 25px;
+      width: 240px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .note-card:hover { transform: translateY(-5px); }
+
+    .note-card h3 { color: var(--accent); margin-bottom: 12px; }
+    .note-card p { color: var(--muted); }
+
+    a.download-btn {
+      display: inline-block;
+      margin-top: 8px;
+      background: var(--primary);
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    a.download-btn:hover { background: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Download Notes</h1>
+    <p>Access free, widely-used study PDFs from trusted sources for quick learning and revision.</p>
+
+    <div class="notes-container">
+      <div class="note-card">
+        <h3>HTML Tutorial (TutorialsPoint)</h3>
+        <p>Comprehensive HTML reference & examples</p>
+        <a href="https://www.tutorialspoint.com/html/html_tutorial.pdf" target="_blank" class="download-btn">Open / Download</a>
+      </div>
+
+      <div class="note-card">
+        <h3>CSS Tutorial (TutorialsPoint)</h3>
+        <p>CSS fundamentals and examples</p>
+        <a href="https://www.tutorialspoint.com/css/css_tutorial.pdf" target="_blank" class="download-btn">Open / Download</a>
+      </div>
+
+      <div class="note-card">
+        <h3>JavaScript (TutorialsPoint)</h3>
+        <p>JS basics and usage for web pages</p>
+        <a href="https://www.tutorialspoint.com/javascript/javascript_tutorial.pdf" target="_blank" class="download-btn">Open / Download</a>
+      </div>
+
+      <div class="note-card">
+        <h3>Python — Intro (OpenStax / textbook)</h3>
+        <p>Beginner-friendly Python textbook (PDF)</p>
+        <a href="https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming_-_WEB.pdf" target="_blank" class="download-btn">Open / Download</a>
+      </div>
+
+      <div class="note-card">
+        <h3>C Programming (Mark Burgess)</h3>
+        <p>Classic C tutorial (K&R style)</p>
+        <a href="https://markburgess.org/CTutorial/C-Tut-4.02.pdf" target="_blank" class="download-btn">Open / Download</a>
+      </div>
+
+      <div class="note-card">
+        <h3>Java Cheat Sheet</h3>
+        <p>Quick Java reference sheet</p>
+        <a href="https://www.geeksforgeeks.org/java/java-cheat-sheet/" target="_blank" class="download-btn">Open / Download</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+

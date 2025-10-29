@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Us | LearnLoop</title>
+
+  <!-- Google font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#1a3c8c;
+      --accent:#355fd1;
+      --bg:#f9fbff;
+      --muted:#6b6f76;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Poppins", Arial, sans-serif;
+      background:var(--bg);
+      color:#111;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .wrap{
+      max-width:1100px;
+      margin:40px auto;
+      padding:30px;
+    }
+
+    .page-title{
+      text-align:center;
+      color:var(--primary);
+      font-size:38px;
+      margin:10px 0 8px;
+      font-weight:700;
+    }
+
+    .lead{
+      text-align:center;
+      color:var(--muted);
+      max-width:760px;
+      margin:0 auto 36px;
+      font-size:18px;
+      line-height:1.6;
+    }
+
+    .contact-box{
+      display:flex;
+      gap:40px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    /* Illustration */
+    .illustration{
+      flex: 0 0 420px;
+      display:flex;
+      justify-content:center;
+    }
+    .illustration img{
+      width:420px;
+      max-width:100%;
+      height:auto;
+      display:block;
+    }
+
+    /* Form + Info column */
+    .right-col{
+      flex: 1 1 420px;
+      max-width:520px;
+      min-width:280px;
+    }
+
+    .contact-form{
+      background:#fff;
+      padding:22px;
+      border-radius:10px;
+      box-shadow: 0 8px 30px rgba(18,24,38,0.06);
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+      width:100%;
+      padding:12px 14px;
+      border-radius:8px;
+      border:1px solid #e1e5ea;
+      margin-bottom:12px;
+      font-size:15px;
+      color:#111;
+      outline:none;
+    }
+    .contact-form textarea{ min-height:120px; resize:vertical; }
+
+    .contact-form button{
+      width:100%;
+      background:var(--primary);
+      color:#fff;
+      padding:12px 16px;
+      border:0;
+      border-radius:8px;
+      font-size:16px;
+      cursor:pointer;
+      font-weight:600;
+    }
+    .contact-form button:hover{ background:var(--accent); }
+
+    .contact-info{
+      margin-top:16px;
+      background:transparent;
+      text-align:left;
+      padding-left:4px;
+    }
+    .contact-info h3{ color:var(--primary); margin:0 0 10px; }
+    .contact-info p{ margin:6px 0; color:var(--muted); }
+
+    /* Responsive */
+    @media (max-width:880px){
+      .contact-box{ gap:24px; }
+      .illustration{ flex-basis:320px; }
+      .illustration img{ width:320px; }
+    }
+
+    @media (max-width:560px){
+      .contact-box{ flex-direction:column-reverse; align-items:center; }
+      .right-col{ max-width:100%; }
+      .illustration{ order:-1; }
+      .page-title{ font-size:30px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1 class="page-title">Contact Us</h1>
+    <p class="lead">We’d love to hear from you! Reach out using the form below or our contact details.</p>
+
+    <div class="contact-box">
+      <!-- Illustration: save your generated image as images/contact-illustration.png -->
+      <div class="illustration">
+        <img src="/women.png" alt="Person with laptop illustration">
+        <!-- If you saved the image in the same folder, use: src="contact-illustration.png" -->
+      </div>
+
+      <!-- Form + Info -->
+      <div class="right-col">
+        <form class="contact-form" action="#" method="post" onsubmit="alert('Message sent (demo)'); return false;">
+          <input type="text" name="name" placeholder="Enter your name" required>
+          <input type="email" name="email" placeholder="Enter your email" required>
+          <textarea name="message" placeholder="Write your message..." required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+
+        <div class="contact-info" aria-label="Contact details">
+          <h3>Our Details</h3>
+          <p><strong>Email:</strong> sameekshar52@gmail.com</p>
+          <p><strong>Phone:</strong> +91 98765 43210</p>
+          <p><strong>Address:</strong> Davangere, India</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
